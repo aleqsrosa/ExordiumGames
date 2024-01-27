@@ -1,0 +1,63 @@
+﻿@model ExordiumGames.Models.ItemsVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ItemsVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nazivproizvoda" class="control-label"></label>
+                <input asp-for="Nazivproizvoda" class="form-control" />
+                <span asp-validation-for="Nazivproizvoda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Opis" class="control-label"></label>
+                <input asp-for="Opis" class="form-control" />
+                <span asp-validation-for="Opis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datumakcije" class="control-label"></label>
+                <input asp-for="Datumakcije" class="form-control" />
+                <span asp-validation-for="Datumakcije" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nazivretailera" class="control-label"></label>
+                <input asp-for="Nazivretailera" class="form-control" />
+                <span asp-validation-for="Nazivretailera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="URLdoslike" class="control-label"></label>
+                <input asp-for="URLdoslike" class="form-control" />
+                <span asp-validation-for="URLdoslike" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cijena" class="control-label"></label>
+                <input asp-for="Cijena" class="form-control" />
+                <span asp-validation-for="Cijena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kategorija" class="control-label"></label>
+                <input asp-for="Kategorija" class="form-control" />
+                <span asp-validation-for="Kategorija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
