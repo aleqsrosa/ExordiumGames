@@ -9,7 +9,7 @@ var connectionString = builder.Configuration.GetConnectionString("AppDbContextCo
 builder.Services.AddControllersWithViews();
 
 //Entity
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer());
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("AppDbContextConnection")));
 
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddDefaultTokenProviders()
